@@ -26,6 +26,7 @@
                                      , P.category
                                      , P.description
                                      , P.img_url
+                                     , P.price
                                      , P.qty - IFNULL(O.qty, 0) as qty
                                      , CASE P.qty - O.qty WHEN 0 THEN 'Y'
                                        ELSE 'N'

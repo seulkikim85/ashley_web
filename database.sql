@@ -21,21 +21,22 @@ INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_del
 
 CREATE TABLE `Products` (
   `product_id` varchar(10) COLLATE utf8_bin NOT NULL,
-  `brand_name` varchar(50) COLLATE utf8_bin DEFAULT NULL,
-  `product_name` varchar(100) COLLATE utf8_bin DEFAULT NULL,
-  `category` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `brand_name` varchar(50) COLLATE utf8_bin DEFAULT NOT NULL,
+  `product_name` varchar(100) COLLATE utf8_bin DEFAULT NOT NULL,
+  `category` varchar(3) COLLATE utf8_bin DEFAULT NOT NULL,
   `description` varchar(1000) COLLATE utf8_bin DEFAULT NULL,
   `img_url` varchar(1000) COLLATE utf8_bin DEFAULT NULL,
-  `qty` int(11) DEFAULT NULL,
-  `create_dt` varchar(14) COLLATE utf8_bin DEFAULT NULL,
-  `update_dt` varchar(14) COLLATE utf8_bin DEFAULT NULL,
+  `qty` int(11) DEFAULT NOT NULL,
+  `price` int(11) DEFAULT NOT NULL,
+  `create_dt` varchar(14) COLLATE utf8_bin DEFAULT NOT NULL,
+  `update_dt` varchar(14) COLLATE utf8_bin DEFAULT NOT NULL,
   PRIMARY KEY (`product_id`)
 );
 
-INSERT INTO `ashley`.`products` (`product_id`, `brand_name`, `product_name`, `category`, `description`, `img_url`, `qty`, `create_dt`, `update_dt`) VALUES ('00010001', 'Apple', 'iphon6', '001', 'iphone6', './image/lipstick.jpg', '50', '20170320183400', '20170320183400');
-INSERT INTO `ashley`.`products` (`product_id`, `brand_name`, `product_name`, `category`, `description`, `img_url`, `qty`, `create_dt`, `update_dt`) VALUES ('00010002', 'Apple', 'iphon7', '002', 'iphone7', './image/lipstick.jpg', '4', '20170320183400', '20170320183400');
-INSERT INTO `ashley`.`products` (`product_id`, `brand_name`, `product_name`, `category`, `description`, `img_url`, `qty`, `create_dt`, `update_dt`) VALUES ('00010003', 'Apple', 'iphon8', '003', 'iphone8', './image/lipstick.jpg', '3', '20170320183400', '20170320183400');
-INSERT INTO `ashley`.`products` (`product_id`, `brand_name`, `product_name`, `category`, `description`, `img_url`, `qty`, `create_dt`, `update_dt`) VALUES ('00010004', 'Dell', 'Dell inspire', '001', 'Dell inspire', './image/lipstick.jpg', '6', '20170320183400', '20170320183400');
+INSERT INTO `ashley`.`products` (`product_id`, `brand_name`, `product_name`, `category`, `description`, `img_url`, `qty`, `price`, `create_dt`, `update_dt`) VALUES ('00010001', 'Apple', 'iphon6', '001', 'iphone6', './image/lipstick.jpg', '50', '1000', '20170320183400', '20170320183400');
+INSERT INTO `ashley`.`products` (`product_id`, `brand_name`, `product_name`, `category`, `description`, `img_url`, `qty`, `price`, `create_dt`, `update_dt`) VALUES ('00010002', 'Apple', 'iphon7', '002', 'iphone7', './image/lipstick.jpg', '4', '1200', '20170320183400', '20170320183400');
+INSERT INTO `ashley`.`products` (`product_id`, `brand_name`, `product_name`, `category`, `description`, `img_url`, `qty`, `price`, `create_dt`, `update_dt`) VALUES ('00010003', 'Apple', 'iphon8', '003', 'iphone8', './image/lipstick.jpg', '3', '2000', '20170320183400', '20170320183400');
+INSERT INTO `ashley`.`products` (`product_id`, `brand_name`, `product_name`, `category`, `description`, `img_url`, `qty`, `price`, `create_dt`, `update_dt`) VALUES ('00010004', 'Dell', 'Dell inspire', '001', 'Dell inspire', './image/lipstick.jpg', '6', '2500', '20170320183400', '20170320183400');
     
 
 
