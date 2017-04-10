@@ -51,6 +51,26 @@ CREATE  TABLE `ashley`.`MyBasket` (
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
+INSERT INTO `ashley`.`MyBasket` (`email`, `product_id`, `qty`, `is_ordered`, `create_dt`, `update_dt`) VALUES ('abc@gmail.com', '00010001', '2', 'N', '20170403132000', '20170403132000');
+INSERT INTO `ashley`.`MyBasket` (`email`, `product_id`, `qty`, `is_ordered`, `create_dt`, `update_dt`) VALUES ('abc@gmail.com', '00010003', '1', 'N', '20170403132000', '20170403132000');
+INSERT INTO `ashley`.`MyBasket` (`email`, `product_id`, `qty`, `is_ordered`, `create_dt`, `update_dt`) VALUES ('abc@gmail.com', '00010002', '1', 'Y', '20170403132000', '20170403132000');
+
+CREATE  TABLE `ashley`.`users` (
+  `email` VARCHAR(100) NOT NULL ,
+  `password` VARCHAR(50) NOT NULL ,
+  `first_name` VARCHAR(50) NOT NULL ,
+  `last_name` VARCHAR(50) NOT NULL ,
+  `postal` VARCHAR(7) NULL ,
+  `city` VARCHAR(50) NULL ,
+  `province` VARCHAR(50) NULL ,
+  `tel` VARCHAR(15) NOT NULL ,
+  `create_dt` VARCHAR(14) NOT NULL ,
+  `update_dt` VARCHAR(14) NOT NULL ,
+  PRIMARY KEY (`email`) );
+
+INSERT INTO `ashley`.`users` (`email`, `password`, `first_name`, `last_name`, `postal`, `city`, `province`, `tel`, `create_dt`, `update_dt`) VALUES ('abc@gmail.com', '12345678', 'Daniel', 'Seo', 'M2N G8Q', 'Toronto', 'Ontrario', '647-123-4567', '20160410154300', '20160410154300');
+INSERT INTO `ashley`.`users` (`email`, `password`, `first_name`, `last_name`, `postal`, `city`, `province`, `tel`, `create_dt`, `update_dt`) VALUES ('def@gmail.com', '12345678', 'Seulki', 'Kim', 'M2N 1T9', 'Toronto', 'Ontrario', '647-456-7890', '20160410154500', '20160410154500');
+  
 
 
 

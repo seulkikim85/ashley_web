@@ -7,7 +7,7 @@
     //$username = $_SESSION["username"];
     //$name     = $_SESSION["name"];
 
-    $category = "001";
+    $category = $_POST["category"];
     $products = array();
 
     if (isset($_GET['id'])) {
