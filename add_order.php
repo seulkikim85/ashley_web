@@ -16,7 +16,7 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // prepare sql and bind parameters
-        $stmt = $conn->prepare("INSERT INTO `ashley`.`MyBasket` (`email`, `product_id`, `qty`, `is_delivery`, `create_dt`, `update_dt`) 
+        $stmt = $conn->prepare("INSERT INTO `ashley`.`orders` (`email`, `product_id`, `qty`, `is_delivery`, `create_dt`, `update_dt`) 
                                 VALUES (:email, :product_id, :qty, 'N', date_format(now(), '%Y%m%d%H%i%s'), date_format(now(), '%Y%m%d%H%i%s')");
         $stmt->bindParam(':email',      $email);
         $stmt->bindParam(':product_id', $product_id);

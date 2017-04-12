@@ -2,22 +2,22 @@ DROP DATABASE `Ashley`
 CREATE DATABASE `Ashley` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 
 CREATE TABLE `Orders` (
-  `order_id` varchar(30) COLLATE utf8_bin NOT NULL,
-  `email` varchar(100) COLLATE utf8_bin NOT NULL,
-  `product_id` varchar(10) COLLATE utf8_bin NOT NULL,
+  `order_id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) NOT NULL,
+  `product_id` varchar(10) NOT NULL,
   `event_id` int(11) DEFAULT NULL,
   `qty` int(11) NOT NULL,
-  `is_delivered` varchar(1) COLLATE utf8_bin NOT NULL,
-  `create_dt` varchar(14) COLLATE utf8_bin DEFAULT NULL,
-  `update_dt` varchar(14) COLLATE utf8_bin DEFAULT NULL,
-  PRIMARY KEY (`order_id`,`email`,`product_id`)
+  `is_delivered` varchar(1) NOT NULL,
+  `create_dt` varchar(14) NULL,
+  `update_dt` varchar(14) NULL,
+  PRIMARY KEY (`order_id`)
 );
 
-INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('0001', 'abc@bcd.com', '00010001', '40', 'N', '20170320183900', '20170320183900');
-INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('0002', 'bcd@cde.com', '00010002', '2', 'Y', '20170320185000', '20170320185000');
-INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('0003', 'cca@abc.com', '00010001', '4', 'N', '20170320195000', '20170320195000');
-INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('0003', 'cca@abc.com', '00010002', '1', 'N', '20170320205000', '20170320205000');
-INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('0003', 'cca@abc.com', '00010003', '1', 'N', '20170320305000', '20170320305000');
+INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('1', 'abc@bcd.com', '00010001', '40', 'N', '20170320183900', '20170320183900');
+INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('2', 'bcd@cde.com', '00010002', '2', 'Y', '20170320185000', '20170320185000');
+INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('3', 'cca@abc.com', '00010001', '4', 'N', '20170320195000', '20170320195000');
+INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('4', 'cca@abc.com', '00010002', '1', 'N', '20170320205000', '20170320205000');
+INSERT INTO `ashley`.`orders` (`order_id`, `email`, `product_id`, `qty`, `is_delivered`, `create_dt`, `update_dt`) VALUES ('5', 'cca@abc.com', '00010003', '1', 'N', '20170320305000', '20170320305000');
 
 
 CREATE TABLE `Products` (
